@@ -1,0 +1,70 @@
+ul,ol,li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.flexslider img{
+    display: block;
+}
+.flexslider,.flexslider .slides li{
+    position: relative;
+}
+.flexslider li span{
+    background: #3e3e3e;
+    background: rgba(0,0,0,.8);
+    filter:alpha(opacity=80);
+    color: #fff;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.flex-control-nav {
+    position: absolute;
+    right: 5px;
+    bottom: 10px;
+}
+.flex-control-nav li {
+    margin-right: 5px;
+    display: inline-block;
+    zoom: 1;
+}
+.flex-control-paging li a {
+    background: #dcdcdc;
+    border-radius: 5px;
+    display: block;
+    cursor: pointer;
+    float: left;
+    width: 10px;
+    height: 10px;
+    line-height: 0;
+    font-size: 0;
+    overflow: hidden;
+}
+.flex-control-paging li a.flex-active {
+    background: #ff5e00;
+}
+.flex-direction-nav a{
+    cursor: pointer;
+    width: 40px;
+    height: 68px;
+    position: absolute;
+    top: 50%;
+    line-height: 0;
+    font-size: 0;
+    margin-top: -34px;
+}
+.flex-direction-nav .flex-prev {
+    background: url(http://www.liujiang.gov.cn/imagesq/gxzf/flexslider.png) no-repeat;
+    left: 0;
+}
+.flex-direction-nav .flex-next {
+    background: url(http://www.liujiang.gov.cn/imagesq/gxzf/flexslider.png) -50px 0 no-repeat;
+    right: 0;
+}
+
+/* flexslider end */
