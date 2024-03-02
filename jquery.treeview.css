@@ -1,0 +1,75 @@
+.treeview, .treeview dl { 
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.treeview dl {
+	background-color: white;
+	margin-top: 4px;
+}
+
+.treeview .hitarea {
+	background: url(../imagess/xxgk/xxgk_treeview-default.gif) -64px -25px no-repeat;
+	height: 16px;
+	width: 16px;
+	margin-left: -16px;
+	float: left;
+	cursor: pointer;
+}
+/* fix for IE6 */
+* html .hitarea {
+	display: inline;
+	float:none;
+}
+
+.treeview dd { 
+	margin: 0;
+	padding: 3px 0pt 3px 16px;
+}
+
+.treeview a.selected {
+	background-color: #eee;
+}
+
+#treecontrol { margin: 1em 0; display: none; }
+
+.treeview .hover { color: red; cursor: pointer; }
+
+.treeview dd { background: url(../imagess/xxgk/xxgk_treeview-default-line.gif) 0 0 no-repeat; }
+.treeview dd.collapsable, .treeview dd.expandable { background-position: 0 -176px; }
+
+.treeview .expandable-hitarea { background-position: -80px -3px; }
+
+.treeview dd.last { background-position: 0 -1766px }
+.treeview dd.lastCollapsable, .treeview dd.lastExpandable { background-image: url(../imagess/xxgk/xxgk_treeview-default.gif); }  
+.treeview dd.lastCollapsable { background-position: 0 -111px }
+.treeview dd.lastExpandable { background-position: -32px -67px }
+
+.treeview div.lastCollapsable-hitarea, .treeview div.lastExpandable-hitarea { background-position: 0; }
+
+.treeview-red dd { background-image: url(http://www.liujiang.gov.cn/imagess/xxgk/xxgk_treeview-red-line.gif); }
+.treeview-red .hitarea, .treeview-red dd.lastCollapsable, .treeview-red dd.lastExpandable { background-image: url(http://www.liujiang.gov.cn/imagess/xxgk/xxgk_treeview-red.gif); } 
+
+.treeview-black dd { background-image: url(http://www.liujiang.gov.cn/cssq/xxgk_treeview-black-line.gif); }
+.treeview-black .hitarea, .treeview-black dd.lastCollapsable, .treeview-black dd.lastExpandable { background-image: url(http://www.liujiang.gov.cn/imagess/xxgk/xxgk_treeview-black.gif); }  
+
+.treeview-gray dd { background-image: url(http://www.liujiang.gov.cn/cssq/xxgk_treeview-gray-line.gif); }
+.treeview-gray .hitarea, .treeview-gray dd.lastCollapsable, .treeview-gray dd.lastExpandable { background-image: url(http://www.liujiang.gov.cn/cssq/xxgk_treeview-gray.gif); } 
+
+.treeview-famfamfam dd { background-image: url(http://www.liujiang.gov.cn/cssq/xxgk_treeview-famfamfam-line.gif); }
+.treeview-famfamfam .hitarea, .treeview-famfamfam dd.lastCollapsable, .treeview-famfamfam dd.lastExpandable { background-image: url(http://www.liujiang.gov.cn/cssq/xxgk_treeview-famfamfam.gif); } 
+
+.treeview .placeholder {
+	background: url(http://www.liujiang.gov.cn/cssq/xxgk_ajax-loader.gif) 0 0 no-repeat;
+	height: 16px;
+	width: 16px;
+	display: block;
+}
+
+
+.filetree dd { padding: 3px 0 2px 16px; }
+.filetree .folder, .filetree .file { padding: 1px 0 12px 20px; display: block; }
+.filetree .folder { background: url(../imagess/xxgk/xxgk_folder.gif) 0 0 no-repeat;  font-size:14px; line-height:16px;}
+.filetree dd.expandable .folder { background: url(../imagess/xxgk/xxgk_folder-closed.gif) 0 0 no-repeat; }
+.filetree .file { background: url(../imagess/xxgk/file.gif) 0 0 no-repeat; font-size:14px; line-height:16px;}
