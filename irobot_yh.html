@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>智能问答机器人_北海铁山港</title>
+<meta name="SiteName" content="铁山港区人民政府门户网站">
+<meta name="SiteDomain" content="www.bhtsg.gov.cn">
+<meta name="SiteIDCode" content="4505120001">
+<meta name="ColumnName" content="智能问答机器人">
+<meta name="ColumnDescription" content="智能问答机器人">
+<meta name="ColumnKeywords" content="智能问答机器人">
+<meta name="ColumnType" content="智能问答机器人">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+</head>
+<body marginwidth="0" marginheight="0">
+<link href="static/css/irobot_tsg.css" type="text/css" rel="stylesheet">
+<script language="javascript" src="static/js/jquery-1.8.3.min2.js"></script>
+<script language="javascript" src="static/js/jquery.nicescroll.js"></script>
+<script language="javascript" src="static/js/jquery.scrollTo.js"></script>
+<script language="javascript" src="static/js/jquery.autocomplete.js"></script>
+<script language="javascript" src="static/js/rebot.js"></script>
+<input type="hidden" id="mPath" name="mPath" value="/">
+<style>
+    .autocomplete-suggestions{ width: 544px; }
+</style>          
+
+<div id="st-mainframe">
+        <div id="st-content" style="height: 580px;">
+		<!--左-->
+            <div id="st-content-left">
+			<!--消息box-->
+                <div id="st-message-box" style="overflow: hidden; outline: none;" tabindex="5000">
+                    <div class="st-message-wrap answer">
+                        <div class="st-message-icon"></div>
+                        <div class="st-message">
+                            <div class="st-message-r"></div>
+                            <div class="st-outline">
+							    您好！智能问答为您提供智能咨询服务。
+                            </div>
+                        </div>
+                    </div>
+					<div class="st-starttalk"><span>开始对话</span></div>
+                </div>
+			<!--消息box-->
+			<!--提问框-->
+                <div id="st-input-box">
+                    <form id="ask-form">
+                        <input type="hidden" id="webid" name="channelid" value="281527">
+						<input type="hidden" id="orderid" name="orderby" value="-DocRelTime">
+                        <div id="st-input-wrap">
+                            <span style="display: block;" class="">
+                                <textarea placeholder="请提问……" name="searchword" id="searchword" autocomplete="off"></textarea>
+                            </span>
+                            <div id="st-input-tip">
+                                <span id="st-input-limit">您还可以输入<span id="st-input-limit-count">40</span>个字</span>
+                            </div>
+                            <input type="button" value="" id="st-input-btn">
+                            
+                        </div>
+                    </form>
+                </div>
+			<!--提问框-->
+                <div class="left" id="st-content-middle"></div>
+                <div id="ascrail2000" class="nicescroll-rails" style="width: 7px; z-index: 1; cursor: default; position: absolute; top: 0px; left: 539px; height: 250px; display: none; opacity: 0;">
+                    <div style="position: relative; top: 0px; float: right; width: 5px; height: 0px; background-color: rgb(188, 188, 188); border: 1px solid rgb(255, 255, 255); background-clip: padding-box; border-radius: 5px;"></div>
+                </div>
+                <div id="ascrail2000-hr" class="nicescroll-rails" style="height: 7px; z-index: 1; top: 243px; left: 0px; position: absolute; cursor: default; display: none; opacity: 0;">
+                    <div style="position: relative; top: 0px; height: 5px; width: 0px; background-color: rgb(188, 188, 188); border: 1px solid rgb(255, 255, 255); background-clip: padding-box; border-radius: 5px; left: 0px;"></div>
+                </div>
+            <div id="ascrail2001" class="nicescroll-rails" style="width: 7px; z-index: 1; cursor: default; position: absolute; top: 0px; left: 673px; height: 455px; display: block; opacity: 0;"><div style="position: relative; top: 0px; float: right; width: 5px; height: 250px; background-color: rgb(188, 188, 188); border: 1px solid rgb(255, 255, 255); background-clip: padding-box; border-radius: 5px;"></div></div><div id="ascrail2001-hr" class="nicescroll-rails" style="height: 7px; z-index: 1; top: 448px; left: 0px; position: absolute; cursor: default; display: none; opacity: 0; width: 673px;"><div style="position: relative; top: 0px; height: 5px; width: 680px; background-color: rgb(188, 188, 188); border: 1px solid rgb(255, 255, 255); background-clip: padding-box; border-radius: 5px; left: 0px;"></div>
+			</div>
+
+			</div>
+		<!--左-->
+		<!--右-->
+            <div id="st-content-right" style="padding:10px;">
+                <div style="width:100%;height:32px;line-height:32px;color:#C00;font-size:16px;border-bottom:1px solid #C00;padding-left:6px;">使用说明</div>
+                <div style="width:100%;color:#333;font-size:14px;line-height:25px;">
+				<p>智能问答为您提供智能、全天候、互动式的自动服务。</p>
+				<p>请在输入框输入您要咨询的问题，尽可能多的提供问题关键词，系统会把最相关答案呈现给您。非常期待与您互动，希望智能问答的服务能对您有所帮助。智能问答提供的信息，供您参考。</p>
+                </div>
+                <div style="width:100%;height:32px;line-height:32px;color:#C00;font-size:16px;border-bottom:1px solid #C00;padding-left:6px;"><span class="dateR"><a href="javascript:;" target="_blank">更多 &gt;&gt;</a></span>常见问题及解答</div>
+                <div style="width:100%;color:#333;font-size:14px;line-height:30px;margin-top:8px;">
+			<ul class="arrowred">
+			<iframe id="main" src="irobot_yh1.html" name="MainContent" scrolling="NO" height="240" frameborder="0" width="260"></iframe>
+			</ul>
+                </div>
+                </div>
+		<!--右-->
+            </div>
+ 
+        </div>
+	<div class="autocomplete-suggestions" style="position: absolute; display: none; width: 546px; max-height: 1000px; z-index: 9999; top: 463px; left: 9px;"></div>
+ </body>
+</html>
