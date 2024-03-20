@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+	a{text-decoration: none; color: #000;}
+	 a:hover{ color:#ff0000;}
+	.zixun{}
+	.zixun img { border:none; display: inline;}
+	.zw_cn06 {font:bold 12px/30px Arial,Helvetica,sans-serif;color:#458fcc;background-color:#f9f9f9;border-bottom:1px solid #eeeeee;}
+	.zw_position02 {
+	padding-left:8px;
+}
+	.zw_cn {
+	font:12px/24px Arial, Helvetica, sans-serif;
+	color:#000;
+	 background:#fff;
+}
+.zw_cn_1 {
+	font:14px Microsoft YaHei, SimSun, Arial Narrow;
+	color:#525353;
+	 background:#fff;
+}
+	.zw_position22{border-collapse:collapse;width:100%;font-size:12px;text-align:left;/*border: 1px solid #ccc;*/ background: #f5f5f5;}
+</style>
+<title>海城区人民政府门户网站</title>
+</head>
+
+<body style="background: #fff; margin-top:15px;">
+	<div class="zixun">
+		<table id="mailTable" class="zw_position22" style="margin:-8px;font-family:Microsoft YaHei,SimSun,Arial Narrow;font-size:14px;color:#525353;" cellspacing="1" cellpadding="0" width="100%" align="center" border="0">
+			
+		</table>
+	</div>
+	<script type="text/javascript" src="static/js/jquery.min.js"></script>
+</body>
+</html>
+<script>
+	$(function() {
+		$.ajax({
+			type: "POST",
+			url: "/wcm/RefersServlet",
+			dataType:"json",
+			data:{
+				areaCode:1,
+				currPage:1,
+				pageSize:7,
+				deptId:73
+			},
+			success: function(mailJsonData){
+				var mailData = mailJsonData.mails;
+				//alert(JSON.stringify(mailData));
+				createDataHtml(mailData);
+			},	 
+			error:function(){
+				console.log("加载信件受理数据出错!");
+				//alert("加载信件受理数据出错!");
+			}
+		});
+	});
+
+	function createDataHtml(data) {
+		var htmlText = "";
+		for(var i in data) {
+			htmlText += "<tr>";
+			htmlText += "<td class=\"zw_position02 zw_cn\" bgcolor=\"#fff\" width=\"85%\" height=\"25\">";
+			htmlText += "<div align=\"left\">";
+			htmlText += "<img src=\"images/wlwz_link_04.gif\" width=\"12\" height=\"9\">";
+			htmlText += "<a href=\"refer_detail.html?sn=";
+			htmlText += data[i].id;
+			htmlText += "\"";
+			htmlText += " class=\"zw_cn_1\" target=\"_blank\" title=\"";
+			htmlText += data[i].theme;
+			htmlText += "\">"
+			htmlText += formatTheme(data[i].theme);
+			htmlText += "</a>";
+			htmlText += "</div>";
+			htmlText += "</td>";
+			/*htmlText += "<td class=\"zw_cn_1\" bgcolor=\"#FFFFFF\" width=\"34%\" align=\"center\" title=\"";
+			htmlText += data[i].deptName;
+			htmlText += "\">";
+			htmlText += formatDeptReplyLink2(data[i].deptId, data[i].deptName);
+			htmlText += "</td>";
+			htmlText += "<td class=\"zw_cn_1\" bgcolor=\"#fff\" width=\"15%\" align=\"center\">";
+			htmlText += formatDate(data[i].dealTime);
+			htmlText += "</td>";*/
+			htmlText += "</tr>";
+		}
+
+		$("#mailTable").html(htmlText);
+	}
+
+	/**
+	 * 格式化标题
+	 */
+	function formatTheme(theme) {
+		//console.log(theme.length);
+		if(theme.length <= 16) {
+			return theme;
+		} else {
+			var formatTheme = theme.substring(0, 15) + "...";
+			return formatTheme;
+		}
+	}
+
+	/**
+	 * 格式化部门名称
+	 
+	function formatDept(deptName) {
+		if(deptName.length <= 17) {
+			return deptName;
+		} else {
+			var formatDept = deptName.substring(0, 16) + "...";
+			return formatDept;
+		}
+	}*/
+
+	/**
+	 * 格式化部门回复列表链接
+	 
+	function formatDeptReplyLink2(deptIdStr, deptNameStr) {
+		var formatDeptNameStr = formatDept(deptNameStr);
+		var deptIdArr = deptIdStr.split(",");
+		var deptNameArr = formatDeptNameStr.split(",");
+		var linkContent = "";
+		for(var i = 0; i < deptNameArr.length; i++) {
+			if(i != deptNameArr.length - 1) {
+				linkContent += "<a href=\"reply_list.html?deptId=" + deptIdArr[i] + "\" target=\"_blank\">" + deptNameArr[i] + "</a>" + ",";
+			} else {
+				linkContent += "<a href=\"reply_list.html?deptId=" + deptIdArr[i] + "\" target=\"_blank\">" + deptNameArr[i] + "</a>";
+			}
+		}
+		return linkContent;
+	}*/
+
+	/**
+	 * 格式化时间
+	 */
+	function formatDate(date) {
+		var dateArr = new Array();
+		dateArr = date.split(" ");
+		var arr = dateArr[0].split("-");
+		return arr[1] + "-" + arr[2];
+	}
+</script>
